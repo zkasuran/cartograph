@@ -112,3 +112,62 @@ def test_answer_end_to_end_person():
     assert result["type"] == "person" and result["product"]
     assert result["abstain"] is False and result["answer"]
     assert set(result["answer"]) & set(q["ground_truth"])
+
+
+# ---------------------------------------------------------------- answer() with the
+# LLM planner replaced (fast, deterministic, no network LLM). The seam is the plan
+# function query._plan, the only LLM call answer() makes on these paths; the rest is
+# graph traversal + entity resolution. answer() reads _plan as a module global, so
+# monkeypatch.setattr(query, "_plan", ...) is picked up by the running answer().
+def _person_q(product: str, doc_type: str) -> dict:
+    for q in ONTO["questions"]:
+        if (q["answerable"] and q["type"] == "person" and q["product"] == product
+                and doc_type in q["question"] and "authors and key reviewers" in q["question"]
+                and q["ground_truth"]):
+            return q
+    raise AssertionError(f"no {doc_type!r} person question for {product}")
+
+
+@requires_node
+def test_answer_person_path_via_monkeypatched_plan(monkeypatch):
+    """Full answer() person path with the LLM planner replaced by a fixed plan: a
+    real product + person type + topic keywords resolves to real employee eids that
+    intersect the question's ground truth. Pins the graph person path end to end
+    without the network LLM."""
+    q = _person_q("ActionGenie", "Product Vision Document")
+    plan = {"product": "ActionGenie", "type": "person", "keywords": ["vision", "document"]}
+    monkeypatch.setattr(query, "_plan", lambda question, model=None: plan)
+    result = query.answer(q["question"], OntologyGraph())
+    assert result["type"] == "person" and result["product"] == "ActionGenie"
+    assert result["abstain"] is False and result["answer"]
+    emp_ids = {e["eid"] for e in ONTO["employees"]}
+    assert set(result["answer"]) <= emp_ids, "answer must be real employee eids"
+    assert set(result["answer"]) & set(q["ground_truth"]), "answer must intersect ground truth"
+
+
+@requires_node
+def test_answer_abstains_on_empty_traversal(monkeypatch):
+    """An empty bounded traversal means the answer is not in the corpus, so answer()
+    abstains instead of inventing ids: a real product + person type but keywords that
+    match no artifact yields abstain=True and an empty answer."""
+    plan = {"product": "ActionGenie", "type": "person", "keywords": ["zqxjkbwpmnvxyz"]}
+    monkeypatch.setattr(query, "_plan", lambda question, model=None: plan)
+    result = query.answer("Who contributed to the internal initiative?", OntologyGraph())
+    assert result["product"] == "ActionGenie"
+    assert result["abstain"] is True
+    assert result["answer"] == []
+
+
+def test_answer_abstains_when_product_unresolved(monkeypatch):
+    """When the plan names a product that resolves to none of the 30 real products
+    (and the question names none either), answer() abstains with a null product and
+    an empty answer rather than guessing. Abstains before any graph access."""
+    fake = "Nonexistent Widget 9000"
+    question = "list the people on the internal effort"
+    assert query.resolve_product(fake, question) is None  # precondition for the abstain
+    plan = {"product": fake, "type": "person", "keywords": ["people", "effort"]}
+    monkeypatch.setattr(query, "_plan", lambda q, model=None: plan)
+    result = query.answer(question, OntologyGraph())
+    assert result["product"] is None
+    assert result["abstain"] is True
+    assert result["answer"] == []
