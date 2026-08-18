@@ -1,0 +1,1520 @@
+{
+  "summary": {
+    "per_type": {
+      "person": {
+        "n": 20,
+        "f1": 0.3877,
+        "precision": 0.4361,
+        "recall": 0.3876,
+        "abstain_rate": 0.5
+      },
+      "pr": {
+        "n": 20,
+        "f1": 0.3661,
+        "precision": 0.321,
+        "recall": 0.5833,
+        "abstain_rate": 0.1
+      },
+      "url": {
+        "n": 20,
+        "f1": 0.5,
+        "precision": 0.5,
+        "recall": 0.5,
+        "abstain_rate": 0.0
+      },
+      "company": {
+        "n": 20,
+        "f1": 0.4142,
+        "precision": 0.2824,
+        "recall": 1.0,
+        "abstain_rate": 0.0
+      }
+    },
+    "content": {
+      "n": 20,
+      "accuracy": 0.05
+    },
+    "unanswerable": {
+      "n": 50,
+      "abstention_rate": 0.76
+    },
+    "macro_f1_set_types": 0.417,
+    "config": {
+      "limit_per_type": 20,
+      "include_unanswerable": 50,
+      "seed": 0
+    }
+  },
+  "rows": [
+    {
+      "product": "SearchFlow",
+      "type": "person",
+      "question": "Find employee IDs of team members who provided insights on the strengths and weaknesses of SearchFlow's competitor products?",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 6,
+      "n_correct": 0
+    },
+    {
+      "product": "SearchFlow",
+      "type": "person",
+      "question": "Find employee IDs of team members who shared demos of SearchFlow's competitor products?",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 3,
+      "n_correct": 0
+    },
+    {
+      "product": "PitchForce",
+      "type": "person",
+      "question": "Find employee IDs of Engineering Leads who worked on the previous release of PitchForce?",
+      "abstain": false,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "n_pred": 6,
+      "n_gt": 2,
+      "n_correct": 2
+    },
+    {
+      "product": "MonitorForce",
+      "type": "person",
+      "question": "Find employee IDs of team members who were responsible for features in MonitorForce that were discussed but not implemented?",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 2,
+      "n_correct": 0
+    },
+    {
+      "product": "SupportForce",
+      "type": "person",
+      "question": "Find employee IDs of the authors and key reviewers of the Market Research Report for the SupportForce product?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 0.7,
+      "f1": 0.8235294117647058,
+      "n_pred": 7,
+      "n_gt": 10,
+      "n_correct": 7
+    },
+    {
+      "product": "VizForce",
+      "type": "person",
+      "question": "What is the employee ID of engineers who resolved issues with the AI Model & Data Processing Engine in VizForce that were causing misleading visualizations and undermining trust in the AI's analytical capabilities?",
+      "abstain": false,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "n_pred": 3,
+      "n_gt": 2,
+      "n_correct": 2
+    },
+    {
+      "product": "EdgeForce",
+      "type": "person",
+      "question": "Find the employee ID of engineers who resolved issues with the Security & Access Control in EdgeForce that were posing a significant security risk by allowing sensitive AI models to be tampered with or stolen?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_pred": 2,
+      "n_gt": 3,
+      "n_correct": 2
+    },
+    {
+      "product": "MonitorForce",
+      "type": "person",
+      "question": "Find employee IDs of the authors and key reviewers of the Market Research Report for the MonitorForce product?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714285714285715,
+      "n_pred": 2,
+      "n_gt": 5,
+      "n_correct": 2
+    },
+    {
+      "product": "CoachForce",
+      "type": "person",
+      "question": "Find the employee ID of engineer with the highest number of unapproved feature development PRs in CoachForce?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_gt": 2,
+      "n_correct": 2
+    },
+    {
+      "product": "ProposalForce",
+      "type": "person",
+      "question": "Find employee IDs of team members who shared demos of ProposalForce's competitor products?",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 3,
+      "n_correct": 0
+    },
+    {
+      "product": "CoachForce",
+      "type": "person",
+      "question": "Find the employee IDs of engineers who authored maximum number of PRs in CoachForce for bug fixes that are now reopened by customers.",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 1,
+      "n_correct": 0
+    },
+    {
+      "product": "InsightForce",
+      "type": "person",
+      "question": "Find employee IDs of engineers who are assigned to the highest number of active bugs in InsightForce.",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 2,
+      "n_correct": 0
+    },
+    {
+      "product": "FeedbackForce",
+      "type": "person",
+      "question": "Find employee IDs of the authors and key reviewers of the System Design Document for the FeedbackForce product?",
+      "abstain": false,
+      "precision": 0.8461538461538461,
+      "recall": 0.7857142857142857,
+      "f1": 0.8148148148148148,
+      "n_pred": 13,
+      "n_gt": 14,
+      "n_correct": 11
+    },
+    {
+      "product": "ExplainabilityForce",
+      "type": "person",
+      "question": "Find employee IDs of the authors and key reviewers of the Product Requirements Document for the ExplainabilityForce product?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "n_pred": 3,
+      "n_gt": 6,
+      "n_correct": 3
+    },
+    {
+      "product": "TrendForce",
+      "type": "person",
+      "question": "Find employee IDs of team members who were responsible for features in TrendForce that were discussed but not implemented?",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 3,
+      "n_correct": 0
+    },
+    {
+      "product": "CoachForce",
+      "type": "person",
+      "question": "Find employee IDs of team members who were responsible for features in CoachForce that were discussed but not implemented?",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 1,
+      "n_correct": 0
+    },
+    {
+      "product": "TrendForce",
+      "type": "person",
+      "question": "Find employee IDs of engineers who are assigned to the highest number of active bugs in TrendForce.",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 2,
+      "n_correct": 0
+    },
+    {
+      "product": "PitchForce",
+      "type": "person",
+      "question": "Find employee IDs of engineers who are currently working on the highest number of unresolved customer bugs in PitchForce.",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "CollaborationForce",
+      "type": "person",
+      "question": "Find the employee ID of engineers who resolved issues with the Authentication Module in CollaborationForce that were posing security risks and potentially leading to unauthorized data access?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 5,
+      "n_gt": 5,
+      "n_correct": 5
+    },
+    {
+      "product": "ActionGenie",
+      "type": "person",
+      "question": "Find employee IDs of the authors and key reviewers of the Product Vision Document for the ActionGenie product?",
+      "abstain": false,
+      "precision": 0.875,
+      "recall": 0.7,
+      "f1": 0.7777777777777777,
+      "n_pred": 8,
+      "n_gt": 10,
+      "n_correct": 7
+    },
+    {
+      "product": "ContentForce",
+      "type": "content",
+      "question": "Find all unresolved issues reported by CloudSync in the ContentForce product?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "ContentForce",
+      "type": "content",
+      "question": "What new features about improving CRM integration are added to ContentForce?",
+      "abstain": false,
+      "correct": true,
+      "predicted": "- Pagination and batch processing for Salesforce REST API integration to handle high data volumes.\n- Pagination and batch processing for Microsoft Dynamics 365 REST API integration to handle large data volumes."
+    },
+    {
+      "product": "SecurityForce",
+      "type": "content",
+      "question": "What are the changes suggested by UX Researcher to improve the Product Vision Document for SecurityForce?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "FeedbackForce",
+      "type": "content",
+      "question": "Find bugs reported by FusionTech in FeedbackForce that did not require any fixes?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "ContentForce",
+      "type": "content",
+      "question": "What features could not be added to ContentForce due to security risks?",
+      "abstain": false,
+      "correct": false,
+      "predicted": "Drag-and-drop functionality could not be added because it lacked proper input sanitization, creating a risk of script injection attacks."
+    },
+    {
+      "product": "SupportForce",
+      "type": "content",
+      "question": "What features could not be added to SupportForce due to security risks?",
+      "abstain": false,
+      "correct": false,
+      "predicted": "- IAM roles and permissions due to overly permissive access risks.\n- CloudWatch monitoring due to risks from logging sensitive data."
+    },
+    {
+      "product": "SearchFlow",
+      "type": "content",
+      "question": "What are the unique features of SearchFlow's competitor products?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "CollaborateForce",
+      "type": "content",
+      "question": "What are the changes suggested by UX Researcher to improve the Product Requirements Document for CollaborateForce?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "KnowledgeForce",
+      "type": "content",
+      "question": "What are the weaknesses of KnowledgeForce's competitor products?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "CollaborateForce",
+      "type": "content",
+      "question": "What are the changes suggested by Engineering Lead to improve the Market Research Report for CollaborateForce?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "ForecastForce",
+      "type": "content",
+      "question": "Find all unresolved issues reported by BlueWave in the ForecastForce product?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "CollaborateForce",
+      "type": "content",
+      "question": "What are the changes suggested by UX Researcher to improve the Market Research Report for CollaborateForce?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "SummarizeForce",
+      "type": "content",
+      "question": "What are the changes suggested by Marketing Manager to improve the Market Research Report for SummarizeForce?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "InsightForce",
+      "type": "content",
+      "question": "What features could not be added to InsightForce due to change in product direction?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "KnowledgeForce",
+      "type": "content",
+      "question": "What new features about improving sentiment analysis using BERT are added to KnowledgeForce?",
+      "abstain": false,
+      "correct": false,
+      "predicted": "- Initial integration of BERT into KnowledgeForce’s sentiment analysis pipeline.\n- Fine-tuning BERT with labeled finance-sector data to improve accuracy.\n- Fine-tuning BERT with labeled healthcare-sector data to improve accuracy.\n- Gathering and labeling additional finance-sector data to support ind"
+    },
+    {
+      "product": "FeedbackForce",
+      "type": "content",
+      "question": "Find all unresolved issues reported by NextGenTech in the FeedbackForce product?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "ContentForce",
+      "type": "content",
+      "question": "What are the changes suggested by Engineering Lead to improve the Market Research Report for ContentForce?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "CollaborateForce",
+      "type": "content",
+      "question": "What are the unique features of CollaborateForce's competitor products?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "TrendForce",
+      "type": "content",
+      "question": "What issues were reported by customers for the previous release of TrendForce?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "CollaborateForce",
+      "type": "content",
+      "question": "Find all unresolved issues reported by TechCorp in the CollaborateForce product?",
+      "abstain": true,
+      "correct": false,
+      "predicted": ""
+    },
+    {
+      "product": "AnomalyForce",
+      "type": "company",
+      "question": "Find the name of company that has the maximum number of unresolved bugs in AnomalyForce?",
+      "abstain": false,
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "f1": 0.25,
+      "n_pred": 7,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "PitchForce",
+      "type": "company",
+      "question": "Find the names of  companies were affected by issues in the Database Management & Data Synchronization of PitchForce that led to incorrect customer information and poorly tailored pitches?",
+      "abstain": false,
+      "precision": 0.4444444444444444,
+      "recall": 1.0,
+      "f1": 0.6153846153846153,
+      "n_pred": 9,
+      "n_gt": 4,
+      "n_correct": 4
+    },
+    {
+      "product": "FlowForce",
+      "type": "company",
+      "question": "Find the names of companies were affected by issues in the Database & Data Synchronization Module in FlowForce that led to decisions based on inaccurate data and service disruptions?",
+      "abstain": false,
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714285714285715,
+      "n_pred": 10,
+      "n_gt": 4,
+      "n_correct": 4
+    },
+    {
+      "product": "WorkFlowGenie",
+      "type": "company",
+      "question": "Find the name of company that has the maximum number of reopened bugs in WorkFlowGenie.",
+      "abstain": false,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "f1": 0.3636363636363636,
+      "n_pred": 9,
+      "n_gt": 2,
+      "n_correct": 2
+    },
+    {
+      "product": "SupportForce",
+      "type": "company",
+      "question": "Find the names of companies were affected by issues in the API Gateway of SupportForce that caused unreliable access to the AI assistant's features and interruptions in troubleshooting workflows?",
+      "abstain": false,
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "f1": 0.3636363636363636,
+      "n_pred": 9,
+      "n_gt": 2,
+      "n_correct": 2
+    },
+    {
+      "product": "SearchForce",
+      "type": "company",
+      "question": "Find the name of company that has the maximum number of active bugs in SearchForce.",
+      "abstain": false,
+      "precision": 0.5714285714285714,
+      "recall": 1.0,
+      "f1": 0.7272727272727273,
+      "n_pred": 7,
+      "n_gt": 4,
+      "n_correct": 4
+    },
+    {
+      "product": "SupportForce",
+      "type": "company",
+      "question": "Find the names of companies were affected by issues in the database management of SupportForce that caused performance degradation and potential system crashes?",
+      "abstain": false,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "n_pred": 9,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "CollaborationForce",
+      "type": "company",
+      "question": "Find the name of company that has the maximum number of resolved bugs in CollaborationForce",
+      "abstain": false,
+      "precision": 0.125,
+      "recall": 1.0,
+      "f1": 0.2222222222222222,
+      "n_pred": 8,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "PersonalizeForce",
+      "type": "company",
+      "question": "Find the name of company that has the maximum number of unresolved bugs in PersonalizeForce?",
+      "abstain": false,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "n_pred": 10,
+      "n_gt": 2,
+      "n_correct": 2
+    },
+    {
+      "product": "EdgeForce",
+      "type": "company",
+      "question": "Find the name of company that has the maximum number of resolved bugs in EdgeForce",
+      "abstain": false,
+      "precision": 0.1111111111111111,
+      "recall": 1.0,
+      "f1": 0.19999999999999998,
+      "n_pred": 9,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "CollaborationForce",
+      "type": "company",
+      "question": "Find the names of companies were affected by issues in the User Interface of CollaborationForce that made it difficult to follow conversation threads and led to communication errors?",
+      "abstain": false,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "n_pred": 8,
+      "n_gt": 4,
+      "n_correct": 4
+    },
+    {
+      "product": "AutoTuneForce",
+      "type": "company",
+      "question": "Find names of companies that reported issues with the previous release of AutoTuneForce?",
+      "abstain": false,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "n_pred": 10,
+      "n_gt": 2,
+      "n_correct": 2
+    },
+    {
+      "product": "AnomalyForce",
+      "type": "company",
+      "question": "Find the names of companies were affected by issues in the Anomaly Detection Algorithm in AnomalyForce that caused incorrect alerts and reduced trust in the system's reliability?",
+      "abstain": false,
+      "precision": 0.5714285714285714,
+      "recall": 1.0,
+      "f1": 0.7272727272727273,
+      "n_pred": 7,
+      "n_gt": 4,
+      "n_correct": 4
+    },
+    {
+      "product": "PitchForce",
+      "type": "company",
+      "question": "Find the name of company that has the maximum number of unresolved bugs in PitchForce?",
+      "abstain": false,
+      "precision": 0.1111111111111111,
+      "recall": 1.0,
+      "f1": 0.19999999999999998,
+      "n_pred": 9,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "MonitorForce",
+      "type": "company",
+      "question": "Find the name of company that reported the maximum number of issues that didn’t need fixes in MonitorForce?",
+      "abstain": false,
+      "precision": 0.125,
+      "recall": 1.0,
+      "f1": 0.2222222222222222,
+      "n_pred": 8,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "SummarizeForce",
+      "type": "company",
+      "question": "Find the name of company that reported the maximum number of issues that didn’t need fixes in SummarizeForce?",
+      "abstain": false,
+      "precision": 0.125,
+      "recall": 1.0,
+      "f1": 0.2222222222222222,
+      "n_pred": 8,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "SearchFlow",
+      "type": "company",
+      "question": "Find the names of companies were affected by issues in the backend search engine of SearchFlow that prevented retrieval of important historical messages, risking loss of critical information and user dissatisfaction?",
+      "abstain": false,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "n_pred": 10,
+      "n_gt": 5,
+      "n_correct": 5
+    },
+    {
+      "product": "SentimentForce",
+      "type": "company",
+      "question": "Find the name of company that has the maximum number of unresolved bugs in SentimentForce?",
+      "abstain": false,
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "n_pred": 10,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "AnomalyForce",
+      "type": "company",
+      "question": "Find the name of company that has the maximum number of resolved bugs in AnomalyForce",
+      "abstain": false,
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "f1": 0.25,
+      "n_pred": 7,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "ContextForce",
+      "type": "company",
+      "question": "Find names of companies that highlighted strengths of the previous release of ContextForce?",
+      "abstain": false,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "n_pred": 10,
+      "n_gt": 5,
+      "n_correct": 5
+    },
+    {
+      "product": "VizForce",
+      "type": "pr",
+      "question": "Can you provide links to the PRs related to the AI Engine in VizForce that were reverted because they introduced bugs in the product?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 1,
+      "n_gt": 1,
+      "n_correct": 0
+    },
+    {
+      "product": "VizForce",
+      "type": "pr",
+      "question": "Could you provide the links to the PRs for updating the database schema in VizForce that need to be merged?",
+      "abstain": false,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "f1": 0.2857142857142857,
+      "n_pred": 6,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "PitchForce",
+      "type": "pr",
+      "question": "Could you provide the links to the approved PRs for updating the data ingestion pipelines in PitchForce that need to be closed?",
+      "abstain": false,
+      "precision": 0.125,
+      "recall": 1.0,
+      "f1": 0.2222222222222222,
+      "n_pred": 8,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "ConnectForce",
+      "type": "pr",
+      "question": "Could you provide the links to the PRs for the AI-driven data anomaly detection feature in ConnectForce that need to be merged?",
+      "abstain": false,
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "n_pred": 8,
+      "n_gt": 2,
+      "n_correct": 2
+    },
+    {
+      "product": "SecurityForce",
+      "type": "pr",
+      "question": "Can you provide links to the approved PRs for ensuring compliance with emerging regulations in SecurityForce?",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 5,
+      "n_correct": 0
+    },
+    {
+      "product": "AnomalyForce",
+      "type": "pr",
+      "question": "Can you provide links to PRs for expanding security measures in AnomalyForce that were not approved?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "CollaborateForce",
+      "type": "pr",
+      "question": "Can you provide links to the approved PRs for expanding API support in CollaborateForce that need to be closed?",
+      "abstain": false,
+      "precision": 0.09090909090909091,
+      "recall": 1.0,
+      "f1": 0.16666666666666669,
+      "n_pred": 11,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "SecurityForce",
+      "type": "pr",
+      "question": "Can you provide links to PRs related to ensuring compliance with emerging regulations in SecurityForce that were not approved?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_gt": 1,
+      "n_correct": 1
+    },
+    {
+      "product": "ExplainabilityForce",
+      "type": "pr",
+      "question": "Can you provide links to the PRs related to the AWS and Azure integration - Resource planning feature in ExplainabilityForce that were reverted because they introduced bugs in the product?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_gt": 2,
+      "n_correct": 0
+    },
+    {
+      "product": "CollaborateForce",
+      "type": "pr",
+      "question": "Can you provide links to PRs related to the API design with GraphQL for CollaborateForce that were reverted due to changes in product direction?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_gt": 2,
+      "n_correct": 0
+    },
+    {
+      "product": "ConnectForce",
+      "type": "pr",
+      "question": "Can you provide links to PRs for the AI-driven data anomaly detection feature in ConnectForce that were reverted due to changes in product direction?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 1,
+      "n_gt": 1,
+      "n_correct": 0
+    },
+    {
+      "product": "CollaborationForce",
+      "type": "pr",
+      "question": "Can you provide links to the approved PRs for implementing Advanced Security Protocols in CollaborationForce?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 4,
+      "n_gt": 4,
+      "n_correct": 4
+    },
+    {
+      "product": "ExplainabilityForce",
+      "type": "pr",
+      "question": "Could you provide links to PRs related to the Security - Data encryption feature in ExplainabilityForce that were reverted due to changes in product direction?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "WorkFlowGenie",
+      "type": "pr",
+      "question": "Can you find links to PRs for enhancing AI capabilities with natural language processing in WorkFlowGenie that were reverted as they introduced bugs in the product?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 1,
+      "n_gt": 1,
+      "n_correct": 0
+    },
+    {
+      "product": "ContextForce",
+      "type": "pr",
+      "question": "Could you provide links to the approved PRs for implementing predictive analytics in ContextForce?",
+      "abstain": false,
+      "precision": 0.45454545454545453,
+      "recall": 1.0,
+      "f1": 0.625,
+      "n_pred": 11,
+      "n_gt": 5,
+      "n_correct": 5
+    },
+    {
+      "product": "ConnectForce",
+      "type": "pr",
+      "question": "Could you provide the links to the PRs for enhancing NLP capabilities for better user interactions in ConnectForce that need to be merged?",
+      "abstain": false,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.7499999999999999,
+      "n_pred": 5,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "VizForce",
+      "type": "pr",
+      "question": "Could you provide the links to the approved PRs for the Database Schema feature in VizForce that need to be closed?",
+      "abstain": false,
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714285714285715,
+      "n_pred": 5,
+      "n_gt": 2,
+      "n_correct": 2
+    },
+    {
+      "product": "CollaborationForce",
+      "type": "pr",
+      "question": "Can you provide links to PRs for the Improved Salesforce Integration feature in CollaborationForce that were not approved?",
+      "abstain": true,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 0,
+      "n_gt": 1,
+      "n_correct": 0
+    },
+    {
+      "product": "LeadForce",
+      "type": "pr",
+      "question": "Could you provide the links to the PRs for implementing real-time engagement tracking in LeadForce that need to be merged?",
+      "abstain": false,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "n_pred": 6,
+      "n_gt": 2,
+      "n_correct": 2
+    },
+    {
+      "product": "SummarizeForce",
+      "type": "pr",
+      "question": "Could you provide links to the approved PRs for the real-time summary generation backend integration with Slack in SummarizeForce that need to be closed?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_pred": 2,
+      "n_gt": 3,
+      "n_correct": 2
+    },
+    {
+      "product": "LeadForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for the previous version of LeadForce?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 7,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "FlowForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for the previous version of FlowForce?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "PitchForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for the previous version of PitchForce?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 5,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "ContextForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for the previous version of ContextForce?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "VizForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for VizForce's competitor products?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "AnomalyForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for AnomalyForce's competitor products?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "ProposalForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for ProposalForce's competitor products?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "ContentForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for ContentForce's competitor products?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "SecurityForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for SecurityForce's competitor products?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "AutoTuneForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for the previous version of AutoTuneForce?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 4,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "SummarizeForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for SummarizeForce's competitor products?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "TrendForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for the previous version of TrendForce?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 4,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "CollaborateForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for CollaborateForce's competitor products?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "KnowledgeForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for KnowledgeForce's competitor products?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "SentimentForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for the previous version of SentimentForce?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 6,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "PersonalizeForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for PersonalizeForce's competitor products?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "SearchForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for the previous version of SearchForce?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 7,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "ForecastForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for the previous version of ForecastForce?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 11,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "EdgeForce",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for the previous version of EdgeForce?",
+      "abstain": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_gt": 4,
+      "n_correct": 0
+    },
+    {
+      "product": "SearchFlow",
+      "type": "url",
+      "question": "Find the demo URLs shared by team members for SearchFlow's competitor products?",
+      "abstain": false,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_gt": 3,
+      "n_correct": 3
+    },
+    {
+      "product": "ExplainabilityForce",
+      "type": null,
+      "question": "Could you provide the links to the approved PRs for the Salesforce integration - Schema management feature in ExplainabilityForce that need to be closed?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "ContentForce",
+      "type": null,
+      "question": "Find bugs reported by TechCorp in ContentForce that did not require any fixes?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "CollaborationForce",
+      "type": null,
+      "question": "Find employee IDs of Product Managers who reviewed the Market Research Report for CollaborationForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "CoachForce",
+      "type": null,
+      "question": "Find the demo URLs shared by team members for CoachForce's competitor products?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ConnectForce",
+      "type": null,
+      "question": "Find employee IDs of Product Managers who reviewed the Product Requirements Document for ConnectForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "PitchForce",
+      "type": null,
+      "question": "Could you provide the links to the approved PRs for enhancing NLP models in PitchForce that need to be closed?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "SummarizeForce",
+      "type": null,
+      "question": "Find bugs reported by TechCorp in SummarizeForce that did not require any fixes?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "SupportForce",
+      "type": null,
+      "question": "Find the name of companies that reported the most issues that didn’t need fixes in SupportForce?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "SummarizeForce",
+      "type": null,
+      "question": "Find the employee IDs of engineers who dismissed maximum bugs in SummarizeForce that are now reopened by customers.",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "SupportForce",
+      "type": null,
+      "question": "Find employee IDs of Product Managers who reviewed the Product Requirements Document for SupportForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "MonitorForce",
+      "type": null,
+      "question": "Find bugs reported by TechCorp in MonitorForce that did not require any fixes?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "FlowForce",
+      "type": null,
+      "question": "What new features related to optimizing the real-time processing modules have been added to FlowForce?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "ProposalForce",
+      "type": null,
+      "question": "What are the changes suggested by Marketing Manager to improve the Product Requirements Document for ProposalForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "SummarizeForce",
+      "type": null,
+      "question": "What are the changes suggested by QA Specialist to improve the Product Vision Document for SummarizeForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ForecastForce",
+      "type": null,
+      "question": "Find the demo URLs shared by team members for ForecastForce's competitor products?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "SentimentForce",
+      "type": null,
+      "question": "Find bugs reported by InnovateAI in SentimentForce that did not require any fixes?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "FeedbackForce",
+      "type": null,
+      "question": "What features were temporarily delayed due to security concerns but eventually added to FeedbackForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "SecurityForce",
+      "type": null,
+      "question": "What are the changes suggested by UX Researcher to improve the Technical Specifications Document for SecurityForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "CollaborateForce",
+      "type": null,
+      "question": "What are the changes suggested by Product Manager to improve the Product Requirements Document for CollaborateForce?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "VizForce",
+      "type": null,
+      "question": "What are the changes suggested by Marketing Manager to improve the Technical Specifications Document for VizForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ExplainabilityForce",
+      "type": null,
+      "question": "Find employee IDs of Product Managers who reviewed the Product Vision Document for ExplainabilityForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "CollaborateForce",
+      "type": null,
+      "question": "Find bugs reported by InnovateAI in CollaborateForce that did not require any fixes?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ConnectForce",
+      "type": null,
+      "question": "Find the employee IDs of engineers who dismissed maximum bugs in ConnectForce that are now reopened by customers.",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "SummarizeForce",
+      "type": null,
+      "question": "Could you provide the links to the PRs for the real-time summary generation backend integration with Slack in SummarizeForce that need to be merged?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "KnowledgeForce",
+      "type": null,
+      "question": "What are the changes suggested by Technical Architect to improve the Technical Specifications Document for KnowledgeForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "EdgeForce",
+      "type": null,
+      "question": "Find names of companies that reported bugs that were later determined to not require any fixes in EdgeForce?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "MonitorForce",
+      "type": null,
+      "question": "Find bugs reported by FusionTech in MonitorForce that did not require any fixes?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "SentimentForce",
+      "type": null,
+      "question": "What are the unique features of SentimentForce's competitor products?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ProposalForce",
+      "type": null,
+      "question": "What are the changes suggested by Chief Product Officer to improve the Technical Specifications Document for ProposalForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "FlowForce",
+      "type": null,
+      "question": "Find employee IDs of team members who provided insights on the strengths and weaknesses of FlowForce's competitor products?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ContextForce",
+      "type": null,
+      "question": "What are the weaknesses of ContextForce's competitor products?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "CollaborateForce",
+      "type": null,
+      "question": "What are the changes suggested by Marketing Manager to improve the Technical Specifications Document for CollaborateForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "VizForce",
+      "type": null,
+      "question": "Find the name of companies that reported the most issues that didn’t need fixes in VizForce?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "FeedbackForce",
+      "type": null,
+      "question": "Find the demo URLs shared by team members for FeedbackForce's competitor products?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "AnomalyForce",
+      "type": null,
+      "question": "What are the changes suggested by QA Specialist to improve the Market Research Report for AnomalyForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ConnectForce",
+      "type": null,
+      "question": "Find bugs reported by FusionTech in ConnectForce that did not require any fixes?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "MonitorForce",
+      "type": null,
+      "question": "Find employee IDs of Product Managers who reviewed the Market Research Report for MonitorForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "AnomalyForce",
+      "type": null,
+      "question": "What are the changes suggested by Technical Architect to improve the Product Requirements Document for AnomalyForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ContentForce",
+      "type": null,
+      "question": "What are the changes suggested by Marketing Manager to improve the System Design Document for ContentForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "LeadForce",
+      "type": null,
+      "question": "Find bugs reported by CloudSync in LeadForce that did not require any fixes?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ExplainabilityForce",
+      "type": null,
+      "question": "Can you provide links to the approved PRs for the Security - Data encryption feature in ExplainabilityForce that need to be closed?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "PitchForce",
+      "type": null,
+      "question": "Find employee IDs of team members who shared demos of PitchForce's competitor products?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ContextForce",
+      "type": null,
+      "question": "Find employee IDs of team members who provided insights on the strengths and weaknesses of ContextForce's competitor products?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "CollaborationForce",
+      "type": null,
+      "question": "Find the name of companies that reported the most issues that didn’t need fixes in CollaborationForce?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "CoachForce",
+      "type": null,
+      "question": "Find employee IDs of Technical Architects who reviewed the Product Requirements Document for CoachForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "TrendForce",
+      "type": null,
+      "question": "What are the weaknesses of TrendForce's competitor products?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ContentForce",
+      "type": null,
+      "question": "What are the changes suggested by Chief Product Officer to improve the Technical Specifications Document for ContentForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "AnomalyForce",
+      "type": null,
+      "question": "What are the changes suggested by Marketing Manager to improve the Technical Specifications Document for AnomalyForce?",
+      "abstain": true,
+      "correct": true
+    },
+    {
+      "product": "ContentForce",
+      "type": null,
+      "question": "What new features related to bolstering security protocols have been added to ContentForce?",
+      "abstain": false,
+      "correct": false
+    },
+    {
+      "product": "LeadForce",
+      "type": null,
+      "question": "Find bugs reported by DataSolutions in LeadForce that did not require any fixes?",
+      "abstain": true,
+      "correct": true
+    }
+  ]
+}

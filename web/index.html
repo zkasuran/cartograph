@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Enterprise ontology deep-search on HydraDB</title>
+<style>
+:root{--bg:#0c0e13;--panel:#151924;--line:#242c3b;--txt:#e5eaf2;--dim:#8592a6;--acc:#8b7cff;--good:#54d6a0;--warn:#ffcf6b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.55 ui-sans-serif,system-ui,sans-serif}
+header{padding:20px 26px;border-bottom:1px solid var(--line)}
+h1{font-size:18px;margin:0}h1 b{color:var(--acc)}.sub{color:var(--dim);font-size:13px;margin-top:4px}
+.wrap{max-width:860px;margin:0 auto;padding:24px 26px}
+.ask{display:flex;gap:10px}
+input{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;color:var(--txt);font:inherit}
+button{background:var(--acc);color:#0c0e13;border:0;border-radius:8px;padding:0 18px;font:inherit;font-weight:600;cursor:pointer}
+button:disabled{opacity:.5}
+.chips{margin:14px 0 4px;display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:6px 12px;font-size:12px;color:var(--dim);cursor:pointer}
+.chip:hover{border-color:var(--acc);color:var(--txt)}.chip.u{border-style:dashed}
+.res{margin-top:20px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:none}
+.tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--dim);border:1px solid var(--line);border-radius:6px;padding:2px 8px;margin-right:6px}
+.ans{margin-top:12px}.item{font-family:ui-monospace,monospace;background:#0f131d;border:1px solid var(--line);border-radius:6px;padding:7px 10px;margin:6px 0;word-break:break-all}
+.abstain{color:var(--warn)}.ok{color:var(--good)}
+.meta{color:var(--dim);font-size:12px;margin-top:10px}
+</style></head>
+<body>
+<header>
+  <h1><b>ontology</b> · enterprise deep-search</h1>
+  <div class="sub">structural questions are graph traversals in HydraDB; unanswerable ones are declined by reachability, not guessed</div>
+</header>
+<div class="wrap">
+  <div class="ask">
+    <input id="q" placeholder="Ask: who authored and reviewed the market research report for MonitorForce?" />
+    <button id="go">ask</button>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="res" id="res"></div>
+</div>
+<script>
+const $=s=>document.querySelector(s);
+async function j(u,o){const r=await fetch(u,o);if(!r.ok)throw new Error(u+' '+r.status);return r.json();}
+async function boot(){
+  try{const ex=await j('/api/examples');const c=$('#chips');
+    ex.answerable.forEach(q=>add(q,false));ex.unanswerable.forEach(q=>add(q,true));
+  }catch(e){}
+}
+function add(q,u){const d=document.createElement('div');d.className='chip'+(u?' u':'');
+  d.textContent=(u?'∅ ':'')+ (q.length>62?q.slice(0,62)+'…':q);d.title=q;d.onclick=()=>{$('#q').value=q;run();};$('#chips').appendChild(d);}
+async function run(){
+  const q=$('#q').value.trim();if(!q)return;
+  $('#go').disabled=true;const res=$('#res');res.style.display='block';res.innerHTML='resolving over the graph…';
+  try{
+    const r=await j('/api/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})});
+    let h=`<span class="tag">type ${r.type||'?'}</span><span class="tag">product ${r.product||'unresolved'}</span>`;
+    if(r.abstain||!r.answer||(Array.isArray(r.answer)&&!r.answer.length)){
+      h+=`<div class="ans abstain">✗ Not in the corpus. No supporting path exists in the graph, so the honest answer is to decline.</div>`;
+    }else if(Array.isArray(r.answer)){
+      h+=`<div class="ans ok">✓ ${r.answer.length} result(s) via graph traversal</div>`+
+         r.answer.map(a=>`<div class="item">${a}</div>`).join('');
+    }else{ h+=`<div class="ans ok">✓ answer</div><div class="item">${r.answer}</div>`; }
+    res.innerHTML=h;
+  }catch(e){res.innerHTML='<span class="abstain">error: '+e.message+'</span>';}
+  $('#go').disabled=false;
+}
+$('#go').onclick=run;$('#q').addEventListener('keydown',e=>{if(e.key==='Enter')run();});boot();
+</script>
+</body></html>
